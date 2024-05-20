@@ -1,0 +1,344 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    overflow-y: auto;
+
+}
+  .container {
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f9;
+  }
+  
+  .sidebar, .sidebar-right {
+    width: 80px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+  .sidebar a, .sidebar-right a {
+    margin: 20px 0;
+    color: #000;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .header {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    padding-left: 20px;
+    
+  }
+  
+  .main {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .box h3 {
+    margin-bottom: 10px;
+  }
+  
+  .add-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .add-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .wallet-summary, .calendar {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-left: 180px;
+  }
+  
+  .wallet-summary h3, .calendar h3 {
+    margin-bottom: 10px;
+    
+  }
+  
+  .form-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 400px;
+    background-color: white;
+    box-shadow: -4px 0 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    
+  }
+  
+  .form-container.active {
+    display: flex;
+  }
+  
+  .form-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .form-container .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-container .form-group input,
+  .form-container .form-group select,
+  .form-container .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-container .form-group textarea {
+    resize: vertical;
+  }
+  
+  .submit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .close-button {
+    background-color: #f4f4f9;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: flex-end;
+    
+  }
+  
+  .close-button:hover {
+    background-color: #ddd;
+  }
+  
+  .income-expense-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .income-expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .income-expense-item .details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .income-expense-item .details span {
+    font-size: 14px;
+  }
+  
+  .income-expense-item .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .income-expense-item .actions i {
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 20px;
+  }
+  
+  .modal-content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .modal-content ul li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .modal-content ul li:hover {
+    background-color: #f4f4f9;
+  }
+  
+  .modal-content button {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .modal-content button:hover {
+    background-color: #0056b3;
+  }
+  
+  .container {
+    display: flex;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    padding: 0px;
+    margin-left: 80px;
+    
+    
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.box {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    width: 40%;
+    margin-left: 80px;
+}
+
+.income-expense-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.income-expense-item {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #0056b3;
+}
+
+.form-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.form-container.active {
+    transform: translateX(0);
+}
+
+.close-button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
