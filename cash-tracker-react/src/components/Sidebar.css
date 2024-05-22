@@ -4,7 +4,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #333;
+    background-color: #ffffff;
+    border:#555;
     display: flex;
     flex-direction: column;
     align-items: center;

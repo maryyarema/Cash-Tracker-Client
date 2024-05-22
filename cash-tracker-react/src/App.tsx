@@ -10,6 +10,7 @@ import AddIncomeExpensePage from './pages/AddIncomeExpensePage';
 import Sidebar from "./components/Sidebar"; // Import the Sidebar component
 import './App.css'; // Make sure to import your CSS here if you haven't
 import { Outlet } from 'react-router-dom';
+import Signup from './pages/Signup';
 
 const App: React.FC = () => {
     useEffect(() => {
@@ -29,7 +30,9 @@ const App: React.FC = () => {
                 <div className="content-container">
                     <Routes>
                         <Route path="/login" element={store.isAuth ? <Navigate to="/" /> : <Login />} />
+                        <Route path="/signup" element={store.isAuth ? <Navigate to="/" /> : <Signup />} />
                         <Route path="/" element={store.isAuth ? <DashboardLayout /> : <Navigate to="/login" />}>
+                            
                             <Route index element={<Dashboard />} />
                             <Route path="income-categories" element={<AddCategoryPage />} />
                             <Route path="expense-categories" element={<AddCategoryPage />} />
